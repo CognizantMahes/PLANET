@@ -12,7 +12,7 @@ class ServiceHandler{
     private init(){}
     
     func fetchJSON(completion: @escaping(Result<PlanetData?,Error>) -> ()){
-    let apiURLString =  "https://swapi.dev/api/planets/"
+    let apiURLString = APIURL // "https://swapi.dev/api/planets/"
     guard let apiURL = URL(string: apiURLString) else {
         return
     }
@@ -23,8 +23,8 @@ class ServiceHandler{
         }
         //success
         do {
-            let welcomeObj = try JSONDecoder().decode(PlanetData.self, from: data!)
-            completion(.success(welcomeObj))
+            let planetObj = try JSONDecoder().decode(PlanetData.self, from: data!)
+            completion(.success(planetObj))
         }catch {
             completion(.failure(error))
        }
