@@ -9,4 +9,4 @@ import Foundation
 
 
  let APIURL = "https://swapi.dev/api/planets/"
-
+let HomeTitle = "Planets"

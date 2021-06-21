@@ -13,5 +13,5 @@ class Planet: NSManagedObject {
     @NSManaged var population: String
     @NSManaged var url: String
     
-     
+
 }

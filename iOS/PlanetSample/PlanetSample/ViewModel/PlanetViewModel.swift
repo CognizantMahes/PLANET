@@ -10,6 +10,6 @@ import Foundation
 struct PlanetViewModel{
     var name: String
     init(planet: Planet){
-        self.name = planet.name
+        self.name = planet.name 
     }
 }

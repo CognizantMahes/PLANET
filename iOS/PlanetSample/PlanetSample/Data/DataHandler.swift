@@ -14,6 +14,7 @@ class DataHandler{
     static let shared = DataHandler()
     private init(){}
     
+   
     private let viewContext = (UIApplication.shared.delegate as!  AppDelegate).persistentContainer.viewContext
     
     func add<T:NSManagedObject>(_ type: T.Type) -> T?{
