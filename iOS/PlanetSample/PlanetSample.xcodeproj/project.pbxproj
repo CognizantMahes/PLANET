@@ -16,6 +16,13 @@
 		4D6E1678267F81670076A36C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E1676267F81670076A36C /* LaunchScreen.storyboard */; };
 		4D6E1683267F81680076A36C /* PlanetSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E1682267F81680076A36C /* PlanetSampleTests.swift */; };
 		4D6E168E267F81680076A36C /* PlanetSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E168D267F81680076A36C /* PlanetSampleUITests.swift */; };
+		4D6E16AF267F83CA0076A36C /* PlanetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E16AE267F83CA0076A36C /* PlanetData.swift */; };
+		4D6E16B8267F85790076A36C /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E16B7267F85790076A36C /* ServiceHandler.swift */; };
+		4D6E16C1267F87330076A36C /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E16C0267F87330076A36C /* DataHandler.swift */; };
+		4D6E16C9267F8E640076A36C /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E16C8267F8E640076A36C /* Planet.swift */; };
+		4D6E16D2267FA7D20076A36C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E16D1267FA7D20076A36C /* Constant.swift */; };
+		4D6E16DA267FA8DE0076A36C /* PlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E16D9267FA8DE0076A36C /* PlanetCell.swift */; };
+		4D6E16DF267FAAF50076A36C /* PlanetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E16DE267FAAF50076A36C /* PlanetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		4D6E1689267F81680076A36C /* PlanetSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6E168D267F81680076A36C /* PlanetSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetSampleUITests.swift; sourceTree = "<group>"; };
 		4D6E168F267F81680076A36C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D6E16AE267F83CA0076A36C /* PlanetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetData.swift; sourceTree = "<group>"; };
+		4D6E16B7267F85790076A36C /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
+		4D6E16C0267F87330076A36C /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		4D6E16C8267F8E640076A36C /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		4D6E16D1267FA7D20076A36C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		4D6E16D9267FA8DE0076A36C /* PlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCell.swift; sourceTree = "<group>"; };
+		4D6E16DE267FAAF50076A36C /* PlanetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +115,15 @@
 		4D6E1667267F81660076A36C /* PlanetSample */ = {
 			isa = PBXGroup;
 			children = (
+				4D6E16D0267FA7BF0076A36C /* Util */,
+				4D6E16BF267F87200076A36C /* Data */,
+				4D6E16B6267F85520076A36C /* Network */,
+				4D6E16AD267F82C70076A36C /* Controller */,
+				4D6E16AC267F82C00076A36C /* View */,
+				4D6E16AB267F82B50076A36C /* Model */,
+				4D6E16AA267F82AC0076A36C /* ViewModel */,
 				4D6E1668267F81660076A36C /* AppDelegate.swift */,
 				4D6E166A267F81660076A36C /* SceneDelegate.swift */,
-				4D6E166C267F81660076A36C /* ViewController.swift */,
 				4D6E166E267F81660076A36C /* Main.storyboard */,
 				4D6E1674267F81670076A36C /* Assets.xcassets */,
 				4D6E1676267F81670076A36C /* LaunchScreen.storyboard */,
@@ -129,6 +149,63 @@
 				4D6E168F267F81680076A36C /* Info.plist */,
 			);
 			path = PlanetSampleUITests;
+			sourceTree = "<group>";
+		};
+		4D6E16AA267F82AC0076A36C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4D6E16DE267FAAF50076A36C /* PlanetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4D6E16AB267F82B50076A36C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D6E16AE267F83CA0076A36C /* PlanetData.swift */,
+				4D6E16C8267F8E640076A36C /* Planet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D6E16AC267F82C00076A36C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D6E16D9267FA8DE0076A36C /* PlanetCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D6E16AD267F82C70076A36C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D6E166C267F81660076A36C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4D6E16B6267F85520076A36C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4D6E16B7267F85790076A36C /* ServiceHandler.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4D6E16BF267F87200076A36C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4D6E16C0267F87330076A36C /* DataHandler.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4D6E16D0267FA7BF0076A36C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4D6E16D1267FA7D20076A36C /* Constant.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +338,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6E16DF267FAAF50076A36C /* PlanetViewModel.swift in Sources */,
 				4D6E166D267F81660076A36C /* ViewController.swift in Sources */,
+				4D6E16DA267FA8DE0076A36C /* PlanetCell.swift in Sources */,
+				4D6E16C1267F87330076A36C /* DataHandler.swift in Sources */,
+				4D6E16D2267FA7D20076A36C /* Constant.swift in Sources */,
 				4D6E1669267F81660076A36C /* AppDelegate.swift in Sources */,
+				4D6E16C9267F8E640076A36C /* Planet.swift in Sources */,
 				4D6E166B267F81660076A36C /* SceneDelegate.swift in Sources */,
 				4D6E1673267F81660076A36C /* PlanetSample.xcdatamodeld in Sources */,
+				4D6E16B8267F85790076A36C /* ServiceHandler.swift in Sources */,
+				4D6E16AF267F83CA0076A36C /* PlanetData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

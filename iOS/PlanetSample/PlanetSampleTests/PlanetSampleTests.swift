@@ -7,9 +7,10 @@
 
 import XCTest
 @testable import PlanetSample
+import CoreData
 
 class PlanetSampleTests: XCTestCase {
-
+    let viewContext = (UIApplication.shared.delegate as!  AppDelegate).persistentContainer.viewContext
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -29,5 +30,21 @@ class PlanetSampleTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testPlanetViewModel(){
+        let entityName = "Planet"
+        let entity = NSEntityDescription.entity(forEntityName: entityName, in: viewContext)
+        let planet = Planet(entity: entity! , insertInto:viewContext )
+        planet.name = "TEST NAME"
+        planet.url = ""
+        planet.population = ""
+       
+        
+        let planetViewModel = PlanetViewModel(planet: planet)
+        XCTAssertEqual(planetViewModel.name, planet.name)
+    }
+    
+    
+      
 
 }
